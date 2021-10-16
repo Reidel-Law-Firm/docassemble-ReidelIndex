@@ -1,0 +1,39 @@
+---
+metadata:
+  title: |
+    Reidel Law Index Page
+  temporary session: True
+  logo: |
+    <img height="50px" class="ma_icon" src="/packagestatic/docassemble.IncorpForm/Reidel_logo.svg"><div class="title"></div>
+  title url: |
+    https://www.reidellawfirm.com/
+---
+features:
+  bootstrap theme: docassemble.IncorpForm:bootstrap.min.css
+  css:
+    - docassemble.IncorpForm:styles.css  
+---
+variable name: interview_options
+use objects: True
+data:
+  - id: incorp_form
+    label: Incorporation
+    interview: docassemble.IncorpForm:data/questions/incorp_form.yml
+    image: briefcase
+  - id: signature_tool
+    label: Sign a document
+    interview: docassemble.SignatureForm:data/questions/sign_docs.yml
+    image: file-signature
+---
+mandatory: True
+code: |
+  index_page
+  response(url=interview_url(i=interview_options[int(selected_interview)]["interview"]))
+---
+continue button field: index_page
+question: |
+  Reidel Law Firm Apps
+field: selected_interview
+buttons:
+  - code: |
+      [ {index: button["label"], "image": button["image"]} for index, button in enumerate(interview_options) ]
