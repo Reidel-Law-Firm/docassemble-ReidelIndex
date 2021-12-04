@@ -1,17 +1,13 @@
+include: 
+  - docassemble.ReidelTheme:theme.yml
+---
+modules:
+  - .interview_menu
 ---
 metadata:
   title: |
     Reidel Law Index Page
-  temporary session: True
-  logo: |
-    <img height="50px" class="ma_icon" src="/packagestatic/docassemble.IncorpForm/Reidel_logo.svg"><div class="title"></div>
-  title url: |
-    https://www.reidellawfirm.com/
----
-features:
-  bootstrap theme: docassemble.IncorpForm:bootstrap.min.css
-  css:
-    - docassemble.IncorpForm:styles.css  
+  temporary session: True 
 ---
 variable name: interview_options
 use objects: True
@@ -20,10 +16,16 @@ data:
     label: Incorporation
     interview: docassemble.IncorpForm:data/questions/incorp_form.yml
     image: briefcase
+    roles:
+      - user
+      - admin
   - id: signature_tool
     label: Sign a document
     interview: docassemble.SignatureForm:data/questions/sign_docs.yml
     image: file-signature
+    roles:
+      - user
+      - admin
 ---
 mandatory: True
 code: |
@@ -36,4 +38,4 @@ question: |
 field: selected_interview
 buttons:
   - code: |
-      [ {index: button["label"], "image": button["image"]} for index, button in enumerate(interview_options) ]
+      buttons_matching_roles(interview_options, user_privileges())

@@ -1,8 +1,6 @@
-# docassemble.ReidelIndex
+# Reidel Law Firm Index
 
-A docassemble extension.
+An index of interviews for Reidel Law Firm.
 
-## Author
-
-System Administrator, admin@lemmalegal.com
-
+Copy and customize the lines starting with `variable name: interview_options`
+to add a new interview to the index.
