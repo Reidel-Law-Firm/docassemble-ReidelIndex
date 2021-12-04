@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.ReidelIndex',
       version='0.2.0',
       description=('Index of interviews for Reidel Law Firm'),
-      long_description='# Reidel Law Firm Index\r\n\r\nAn index of interviews for Reidel Law Firm.\r\n\r\nCopy and customize the lines starting with `variable name: interview_options`\r\nto add a new interview to the index.',
+      long_description='# Reidel Law Firm Index\r\n\r\nAn index of interviews for Reidel Law Firm.\r\n\r\nCopy and customize the lines starting with `variable name: interview_options`\r\nto add a new interview to the index.\r\n\r\n`roles` should be a list of roles matching the role names in your Docassemble user configuration.',
       long_description_content_type='text/markdown',
       author='Quinten Steenhuis',
       author_email='quinten@lemmalegal.com',
