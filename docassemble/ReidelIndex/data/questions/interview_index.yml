@@ -44,6 +44,13 @@ data:
      - user
      - admin
      - developer
+  - id: LA_Crawfish
+    label: LA Crawfish
+    interview: docassemble.LacFa:data/questions/lac_fa.yml
+    image: briefcase
+    roles:
+      - admin
+      - developer
 ---
 mandatory: True
 code: |
