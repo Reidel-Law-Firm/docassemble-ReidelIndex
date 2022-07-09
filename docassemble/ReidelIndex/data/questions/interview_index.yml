@@ -38,8 +38,8 @@ data:
      - developer
   - id: Crepe_Delicious_Franchise_Agreement
     label: CrepeDelicious FDD
-    interview: docassemble.CrepeFDD:data/question/Crepe_Delicious_Franchise_Agreement.yml
-    image: briefcase
+    interview: docassemble.CrepeDeliciousFranchiseAgreement:data/questions/Crepe_Delicious_Franchise_Agreement.yml
+    image: utensils
     roles:
      - user
      - admin
@@ -47,7 +47,7 @@ data:
   - id: LA_Crawfish
     label: LA Crawfish
     interview: docassemble.LacFa:data/questions/lac_fa.yml
-    image: briefcase
+    image: utensils
     roles:
       - admin
       - developer
