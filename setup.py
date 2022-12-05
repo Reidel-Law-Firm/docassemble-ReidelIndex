@@ -6,6 +6,7 @@ from distutils.util import convert_path
 
 standard_exclude = ('*.pyc', '*~', '.*', '*.bak', '*.swp*')
 standard_exclude_directories = ('.*', 'CVS', '_darcs', './build', './dist', 'EGG-INFO', '*.egg-info')
+
 def find_package_data(where='.', package='', exclude=standard_exclude, exclude_directories=standard_exclude_directories):
     out = {}
     stack = [(convert_path(where), '', package)]
@@ -43,7 +44,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.ReidelIndex',
-      version='0.3.2',
+      version='0.3.3',
       description=('Index of interviews for Reidel Law Firm'),
       long_description='# Reidel Law Firm Index\r\n\r\nAn index of interviews for Reidel Law Firm.\r\n\r\nCopy and customize the lines starting with `variable name: interview_options`\r\nto add a new interview to the index.\r\n\r\n`roles` should be a list of roles matching the role names in your Docassemble user configuration.',
       long_description_content_type='text/markdown',

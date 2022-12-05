@@ -51,6 +51,14 @@ data:
     roles:
       - admin
       - developer
+  - id: FDD
+    label: FDD Annual Renewal
+    interview: docassemble.FddAnnualRenewal:data/questions/fdd_annual_renewal.yml
+    image: briefcase
+    roles:
+      - user
+      - admin
+      - developer
 ---
 mandatory: True
 code: |
